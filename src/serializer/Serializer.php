@@ -11,7 +11,7 @@ class Serializer extends AbSerializer implements ISerializer
 		$this->_serialisers = array();	
 	}
 	
-	public function addSerialier()
+	public function addSerialier($value)
 	{
 		if (is_array($value)) {
 			$classname = $value['name'].'Serializer';
@@ -62,6 +62,9 @@ class Serializer extends AbSerializer implements ISerializer
 		
 		if (is_array($this->_serialisers)) 
 		{
+			
+			$this->_serialisers = array_reverse($this->_serialisers);
+			
 			foreach ($this->_serialisers as $serializer) 
 			{
 				if (!$serializer->deserialize($buf)) 
@@ -70,12 +73,12 @@ class Serializer extends AbSerializer implements ISerializer
 				}
 				else
 				{
-					$buf = $serializer->getSerializedValue();
+					$buf = $serializer->getDeserializedValue();
 				}
 			}
 		}
 		
-		$this->serializedValue = $buf;
+		$this->deserializedValue = $buf;
 		return true;
 	}	
 	
