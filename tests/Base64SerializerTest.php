@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../serializer/Base64Serializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/Base64Serializer.php';
+
+use com\syamgot\php\serializer\Base64Serializer;
 
 /**
  * Base64Serializer unit test

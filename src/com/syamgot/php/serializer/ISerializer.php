@@ -1,43 +1,49 @@
 <?php
 
-/**
- * 
- * データのシリアライズ機能を提供します。
- * 
- * @package serializer
- * @author syamgot
- * 
- */
-interface ISerializer 
-{
-	/**
-	 * データをシリアライズします。
-	 * 
-	 * @param mixed $value 
-	 * @return boolean
-	 */
-	public function serialize($value);
+namespace com\syamgot\php\serializer {
+	
 	
 	/**
-	 * データをデシリアライズします。
 	 * 
-	 * @param mixed $value 
-	 * @return boolean
-	 */
-	public function deserialize($value);
-	
-	/**
-	 * シリアライズ済みの値を返します
+	 * データのシリアライズ機能を提供します。
 	 * 
-	 * @return string
-	 */
-	public function getSerializedValue();
-	
-	/**
-	 * デシリアライズ済みの値を返します
+	 * @package serializer
+	 * @author syamgot
 	 * 
-	 * @return string
 	 */
-	public function getDeserializedValue();
+	interface ISerializer 
+	{
+		/**
+		 * データをシリアライズします。
+		 * 
+		 * @param mixed $value 
+		 * @return boolean
+		 */
+		public function serialize($value);
+		
+		/**
+		 * データをデシリアライズします。
+		 * 
+		 * @param mixed $value 
+		 * @return boolean
+		 */
+		public function deserialize($value);
+		
+		/**
+		 * シリアライズ済みの値を返します
+		 * 
+		 * @return string
+		 */
+		public function getSerializedValue();
+		
+		/**
+		 * デシリアライズ済みの値を返します
+		 * 
+		 * @return string
+		 */
+		public function getDeserializedValue();
+		
+	}
 	
 }
+

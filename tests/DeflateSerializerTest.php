@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../serializer/DeflateSerializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/DeflateSerializer.php';
+
+use com\syamgot\php\serializer\DeflateSerializer;
 
 /**
  * DeflateSerializer unit test

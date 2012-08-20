@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../serializer/ZlibSerializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/ZlibSerializer.php';
+
+use com\syamgot\php\serializer\ZlibSerializer;
 
 /**
  * ZlibSerializer unit test

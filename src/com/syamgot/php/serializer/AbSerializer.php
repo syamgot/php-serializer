@@ -1,39 +1,43 @@
 <?php
 
-
-/**
- * 
- * serializer の抽象クラスです。
- * 
- * @package serializer
- * @author syamgot
- *
- */
-class AbSerializer
-{
+namespace com\syamgot\php\serializer {
+	
 	
 	/**
-	 * 直近のシリアライズ済みの値を返します
 	 * 
-	 * @return string
+	 * serializer の抽象クラスです。
+	 * 
+	 * @package serializer
+	 * @author syamgot
+	 *
 	 */
-	public function getSerializedValue()
+	class AbSerializer
 	{
-		return $this->serializedValue;	
-	}
+		
+		/**
+		 * 直近のシリアライズ済みの値を返します
+		 * 
+		 * @return string
+		 */
+		public function getSerializedValue()
+		{
+			return $this->serializedValue;	
+		}
+		
+		/**
+		 * 直近のデシリアライズ済みの値を返します
+		 * 
+		 * @return string
+		 */
+		public function getDeserializedValue()
+		{
+			return $this->deserializedValue;	
+		}
 	
-	/**
-	 * 直近のデシリアライズ済みの値を返します
-	 * 
-	 * @return string
-	 */
-	public function getDeserializedValue()
-	{
-		return $this->deserializedValue;	
+		protected $serializedValue = null;
+		protected $deserializedValue = null;
+		
 	}
-
-	protected $serializedValue = null;
-	protected $deserializedValue = null;
 	
 }
 

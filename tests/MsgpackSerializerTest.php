@@ -1,6 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../serializer/MsgpackSerializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/MsgpackSerializer.php';
+
+use com\syamgot\php\serializer\MsgpackSerializer;
 
 /**
  * MsgpackSerializer unit test

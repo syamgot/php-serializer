@@ -1,10 +1,17 @@
 <?php
 
-require_once __DIR__ . '/../serializer/Serializer.php';
-require_once __DIR__ . '/../serializer/Base64Serializer.php';
-require_once __DIR__ . '/../serializer/DeflateSerializer.php';
-require_once __DIR__ . '/../serializer/MsgpackSerializer.php';
-require_once __DIR__ . '/../serializer/ZlibSerializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/Serializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/Base64Serializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/DeflateSerializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/MsgpackSerializer.php';
+require_once __DIR__ . '/../src/com/syamgot/php/serializer/ZlibSerializer.php';
+
+use com\syamgot\php\serializer\Serializer;
+use com\syamgot\php\serializer\Base64Serializer;
+use com\syamgot\php\serializer\DeflateSerializer;
+use com\syamgot\php\serializer\MsgpackSerializer;
+use com\syamgot\php\serializer\ZlibSerializer;
+
 
 /**
  * Serializer unit test
